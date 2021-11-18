@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ComponentStore } from '@ngrx/component-store';
+import { Query, Store, StoreConfig } from '@datorama/akita';
 
 interface CounterState {
     count: number;
@@ -10,22 +10,27 @@ const initialState: CounterState = {
     count: 42
 }
 
-@Injectable({
-    providedIn: 'root'
-})
-export class CounterStateService extends ComponentStore<CounterState> {
-
-    $count: Observable<number> = this.select(state => state.count);
-
+@Injectable({providedIn: 'root'})
+@StoreConfig({ name: 'counter' })
+export class CounterStateService extends Store<CounterState> {
     constructor() {
         super(initialState)
     }
 
     increment() {
-        this.setState(state => ({count: state.count + 1}))
+        this.update(state => ({count: state.count + 1}))
     }
 
     decrement() {
-        this.setState(state => ({count: state.count - 1}))
+        this.update(state => ({count: state.count - 1}))
+    }
+}
+
+@Injectable({providedIn: 'root'})
+export class CounterQuery extends Query<CounterState> {
+    $count: Observable<number> = this.select(state => state.count);
+
+    constructor(protected override  store: CounterStateService) {
+        super(store);
     }
 }

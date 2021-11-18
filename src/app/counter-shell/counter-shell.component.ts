@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CounterStateService } from '../counter-state.service';
+import { CounterQuery, CounterStateService } from '../counter-state.service';
 
 @Component({
     selector: 'app-counter-shell',
@@ -11,10 +11,11 @@ import { CounterStateService } from '../counter-state.service';
 })
 export class CounterShellComponent {
 
-    counter$: Observable<number> = this.counterState.$count;
+    counter$: Observable<number> = this.counterQuery.$count;
 
     constructor(
-        private counterState: CounterStateService
+        private counterState: CounterStateService,
+        private counterQuery: CounterQuery
     ) {
     }
 
