@@ -11,7 +11,7 @@ import { CounterStateService } from '../counter-state.service';
 })
 export class CounterShellComponent {
 
-    counter$: Observable<number> = this.counterState.$count;
+    count$: Observable<number> = this.counterState.count$;
 
     constructor(
         private counterState: CounterStateService
