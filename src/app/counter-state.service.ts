@@ -28,7 +28,7 @@ export class CounterStateService extends Store<CounterState> {
 
 @Injectable({providedIn: 'root'})
 export class CounterQuery extends Query<CounterState> {
-    $count: Observable<number> = this.select(state => state.count);
+    count$: Observable<number> = this.select(state => state.count);
 
     constructor(store: CounterStateService) {
         super(store);
