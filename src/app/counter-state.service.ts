@@ -15,7 +15,7 @@ const initialState: CounterState = {
 })
 export class CounterStateService extends FeatureStore<CounterState> {
 
-    $count: Observable<number> = this.select(state => state.count);
+    count$: Observable<number> = this.select(state => state.count);
 
     constructor() {
         super('counter', initialState)
