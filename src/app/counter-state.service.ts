@@ -30,7 +30,7 @@ export class CounterStateService extends Store<CounterState> {
 export class CounterQuery extends Query<CounterState> {
     $count: Observable<number> = this.select(state => state.count);
 
-    constructor(protected override  store: CounterStateService) {
+    constructor(store: CounterStateService) {
         super(store);
     }
 }
