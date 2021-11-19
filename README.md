@@ -5,7 +5,7 @@ Compare basic setup and bundle size of:
 - [NgRx Component Store](https://ngrx.io/guide/component-store)
 - [Akita](https://datorama.github.io/akita/)
 
-##Bundle Sizes
+## Bundle Sizes
 
 Check the bundle sizes with source map explorer.
 
