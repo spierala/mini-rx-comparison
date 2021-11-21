@@ -16,10 +16,10 @@ Branch: main
 
 Setup: https://github.com/spierala/mini-rx-comparison/blob/main/src/app/counter-state.service.ts
 
+Bundle size: **[combined] (152.39 KB)**
+
 ### MiniRx Feature Store + Store API (Store + Effects) using [Angular Integration (mini-rx-store-ng)](https://mini-rx.io/docs/angular#register-effects) 
 Bundle size: **[combined] (156.9 KB)**
-
-Bundle size: **[combined] (152.39 KB)**
 
 ### NgRx Component Store
 Branch: ngrx-component-store
