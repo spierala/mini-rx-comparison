@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CounterShellComponent } from './counter-shell/counter-shell.component';
 import { Action, StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 interface CounterState {
     count: number;
@@ -36,6 +37,7 @@ function counterReducer(
     imports: [
         BrowserModule,
         StoreModule.forRoot({counter: counterReducer}),
+        EffectsModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]

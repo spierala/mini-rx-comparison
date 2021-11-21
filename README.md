@@ -26,7 +26,10 @@ Setup: https://github.com/spierala/mini-rx-comparison/blob/ngrx-component-store/
 Bundle size: **[combined] (152.25 KB)**
 
 ### NgRx Component Store + NgRx Store
-[combined] (164.17 KB)
+Bundle size: **[combined] (164.17 KB)**
+
+### NgRx Component Store + NgRx Store + NgRx Effects
+Bundle size: **[combined] (171.45 KB)**
 
 ### Akita
 Branch: akita
