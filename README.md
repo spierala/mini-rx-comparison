@@ -59,7 +59,7 @@ Setup State Service: https://github.com/spierala/mini-rx-comparison/blob/akita/s
 
 Bundle size: **[combined] (151.61 KB)**
 
-### Akita 7
+### 3.1 Akita 7
 
 Setup: https://github.com/spierala/mini-rx-comparison/blob/akita_7/src/app/counter-state.service.ts
 
