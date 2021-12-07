@@ -17,6 +17,8 @@ Branch: main
 Setup: https://github.com/spierala/mini-rx-comparison/blob/main/src/app/counter-state.service.ts
 
 Bundle size: **[combined] (152.39 KB)**
+Bundle size: **[combined] (151.94 KB)**
+Bundle size: **[combined] (151.77 KB)**
 
 ### NgRx Component Store
 Branch: ngrx-component-store
@@ -31,3 +33,9 @@ Branch: akita
 Setup: https://github.com/spierala/mini-rx-comparison/blob/akita/src/app/counter-state.service.ts
 
 Bundle size: **[combined] (151.61 KB)**
+
+### Akita 7
+
+Setup: https://github.com/spierala/mini-rx-comparison/blob/akita_7/src/app/counter-state.service.ts
+
+Bundle size: **[combined] (167.19 KB)**
