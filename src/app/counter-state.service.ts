@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { FeatureStore } from 'mini-rx-store';
+import { Store, createState, withProps, select } from '@ngneat/elf';
 
 interface CounterState {
     count: number;
@@ -10,22 +10,23 @@ const initialState: CounterState = {
     count: 42
 }
 
+const { state, config } = createState(withProps<CounterState>(initialState));
+const counterStore = new Store({ state, name: 'counter', config });
+
 @Injectable({
     providedIn: 'root'
 })
-export class CounterStateService extends FeatureStore<CounterState> {
+export class CounterStateService {
 
-    count$: Observable<number> = this.select(state => state.count);
+    count$: Observable<number> = counterStore.pipe(select(state => state.count));
 
-    constructor() {
-        super('counter', initialState)
-    }
+    constructor() {}
 
     increment() {
-        this.setState(state => ({count: state.count + 1}))
+        counterStore.update(state => ({count: state.count + 1}))
     }
 
     decrement() {
-        this.setState(state => ({count: state.count - 1}))
+        counterStore.update(state => ({count: state.count - 1}))
     }
 }
